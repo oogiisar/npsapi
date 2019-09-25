@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NPS API</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Search National Parks</h1>
+
+            <form id="js-form">
+                <select name="State" multiple size="5" required>
+                        <option value="az">Arizona</option>
+                        <option value="ca">California</option>
+                        <option value="tx">Texas</option>
+                        <option value="nm">New Mexico</option>
+                        <option value="wa">Washington</option>
+                        <option value="mt">Montana</option>
+                        <option value="ne">Nebraska</option>
+                        <option value="fl">Florida</option>
+                        <option value="co">Colorado</option>
+                        <option value="ha">Hawaii</option>
+                </select>
+                <p><label for="search-term">State (hold command to select multiple)</label></p>
+                <!--<input type="text" name="search-term" id="js-search-term" required>-->
+
+                <label for="max-results">Maximum results to return</label>
+                <input type="number" name="max-results" id="js-max-results" value="10">
+
+                <input type="submit" value="Go!">
+            </form>
+
+            <p id="js-error-message" class="error-message"></p>
+            <section id="results" class="hidden">
+                <h2>Search results:</h2>
+                <ul id="results-list">
+                </ul>
+            </section>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
